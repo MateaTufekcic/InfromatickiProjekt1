@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Kontaktiranje nas</title>
+  <link rel="stylesheet" href="tema.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<style>
+  body {
+    font-family: "Audiowide", sans-serif;
+    background-image: url("pozadina.jpeg");
+    background-size: cover;
+    background-image: center;
+  }
+
+  .main-section {
+    margin: auto;
+    margin-top: 130px;
+    padding: 0;
+  }
+
+  .modal-content {
+    background-color: rgb(107, 103, 103);
+    opacity: 0.8;
+    padding: 20px 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+  }
+
+  .form-group input {
+    height: 45px;
+    border-radius: 20px;
+  }
+
+  .form-input button {
+    width: 30%px;
+    margin: 10px 0 25px;
+  }
+
+  label {
+    color: white;
+  }
+</style>
+
+<body>
+  <div class="modal-dialog text-center">
+    <div class="col-sm-9 main-section">
+      <div class="modal-content">
+        <div class="col-12 form-input">
+          <form id="myForm">
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="password">Lozinka:</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+            <div class="form-group">
+              <label for="password2">Ponovite lozinku:</label>
+              <input type="password" class="form-control" id="password2" required>
+            </div>
+            <button type="submit" class="btn btn-success" id="subBtn">Registriraj se</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var password2 = document.getElementById("password2").value;
+      
+      if (password !== password2) {
+        alert("Lozinke nisu iste.");
+      } else {
+        prompt("Zašto ste se odlučili registrirati?");
+        console.log("Hvala na odgovoru");
+      }
+
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
